@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agriculture Yield Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <style>
+		h1 {
+			color: mediumseagreen;
+			text-align: center;
+		}
+
+		.warning {
+			color: red;
+			font-weight: bold;
+			text-align: center;
+		}
+		.card{
+		margin-left:120px;
+		margin-top: 20px;
+		color: black;
+		}
+		.container{
+		background:#edf2f7;
+		font-weight: bold;
+		padding-bottom:10px;
+		padding-top: 10px;
+		border-radius: 50px;
+		}
+		body
+		{
+	
+			 background-image: url('/static/img.jpg');
+             background-size: 800px 800px;
+           
+
+		}
+		.card-body{
+			text-align: center;
+			font-weight: bold;
+			color: black;
+			background-color: gray;
+			height: 350px;
+			width: 490px;
+			
+		}
+		
+		h5{
+			font-size: 200%;
+		}
+		.two{
+			font-size: 25px;
+		}
+	</style>
+
+
+
+
+  <body >
+  <!--=======================navbar=====================================================-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><h3>Crop Prediction</h3></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav me-auto mb-3 mb-lg-0">
+			<li class="nav-item">
+				<a class="nav-link active" href="/">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/about_us">About_us</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/overview">overview</a>
+			</li>
+			
+		</ul>
+      
+    </div>
+  </div>
+</nav>
+
+<!--==========================================================================================-->
+  <div class="container my-3 mt-3">
+      <h1 class="text-success">🌱 Agriculture Crop Prediction<span class="text-success">🌱</span></h1>
+	  
+<!--      adding form-->
+      <form action="/predict" method="POST" onsubmit="return validateForm()">
+          <div class="row">
+              <div class="col-md-4">
+					<label for="Nitrogen">Nitrogen</label>
+					<input type="text" id="Nitrogen" name="Nitrogen" placeholder="Enter Amount of Nitrogen " class="form-control" required step="0">
+				</div>
+               <div class="col-md-4">
+					<label for="Phosporus">Phosphorus</label>
+					<input type="text" id="Phosporus" name="Phosporus" placeholder="Enter Amount of Phosphorus " class="form-control" required step="00">
+				</div>
+				<div class="col-md-4">
+					<label for="Potassium">Potassium</label>
+					<input type="text" id="Potassium" name="Potassium" placeholder="Enter Amount of Potassium " class="form-control" required step="0">
+				</div>
+          </div>
+
+          <div class="row mt-4">
+				<div class="col-md-4">
+					<label for="Temperature">Temperature</label>
+					<input type="text" step="0.01" id="Temperature" name="Temperature" placeholder="Enter Temperature in °C" class="form-control" required step="0">
+				</div>
+				<div class="col-md-4">
+					<label for="Humidity">Humidity</label>
+					<input type="text" step="0.01" id="Humidity" name="Humidity" placeholder="Enter Amount of Humidity " class="form-control" required step="0">
+				</div>
+				<div class="col-md-4">
+					<label for="pH">pH</label>
+					<input type="range" step="0.01" id="Ph" name="Ph" min="0" max="14" placeholder="Enter pH value" class="form-control" required step="0">
+				    <span id="phValue">pH Value: 7.00</span>
+				</div>
+			</div>
+
+          <div class="row mt-4">
+				<div class="col-md-4">
+					<label for="Rainfall">Rainfall</label>
+					<input type="text" step="0.01" id="Rainfall" name="Rainfall" placeholder="Enter Rainfall in mm" class="form-control" required>
+				</div>
+			</div>
+
+
+
+           <div class="row mt-4">
+
+           <div class="col-md-12 text-center">
+				<button type="submit" class="btn btn-primary btn-lg">Get Recommendation</button>
+			</div>
+			</div>
+
+			<script>
+				function validateForm() {
+					var numericInputs = document.querySelectorAll('input[type="text"]');
+					var isValid = true;
+			
+					numericInputs.forEach(function (input) {
+						var numericValue = parseFloat(input.value);
+			
+						if (isNaN(numericValue)) {
+							alert('Please enter a numeric value for ' + input.name);
+							isValid = false;
+						} else if (numericValue > 350) {
+							alert('Please enter a value less than or equal to 350 for ' + input.name);
+							isValid = false;
+						}
+					});
+			
+					return isValid;
+				}
+			
+				document.getElementById('Ph').addEventListener('input', function() {
+					document.getElementById('phValue').innerText = 'pH Value: ' + this.value;
+				});
+			</script>
+			
+
+      </form>
+
+
+
+       {% if result %}
+		<!-- <div class="card bg-dark" style="width: 18rem;">
+		  <img src="{{url_for('static', filename='plant.jpg')}}" class="card-img-top" alt="...">
+		  <div class="card-body">
+			<h5 class="card-title">Recommend Crop for cultivation is:</h5>
+			<p class="card-text">{{ result }}</p>
+		  </div>
+		</div> -->
+
+		<div class="card mb-3" style="max-width: 840px; height:350px">
+			<div class="row g-0">
+			  <div class="col-md-5">
+				<img src="{{url_for('static', filename='plant.jpg')}}" width=350px height="350px" "img-fluid rounded-start" alt="...">
+			  </div>
+			  <div class="col-md-7 one">
+				<div class="card-body">
+				  <h5 class="card-title">Recommended Crop for cultivation is:</h5>
+				  <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+				  <p class="card-text two"><small class="text-muted">{{ result }}</small></p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+
+	   {% endif %}
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>

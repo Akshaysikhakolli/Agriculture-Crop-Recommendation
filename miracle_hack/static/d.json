@@ -1,0 +1,158 @@
+{
+    "crops": {
+        "Rice": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "single superphosphate",
+                "potassium": "muriate of potash"
+            }
+        },
+        "Maize": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium nitrate",
+                "phosphorus": "diammonium phosphate",
+                "potassium": "potassium chloride"
+            }
+        },
+        "Jute": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "single superphosphate",
+                "potassium": "muriate of potash"
+            }
+        },
+        "Cotton": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "diammonium phosphate",
+                "potassium": "potassium chloride"
+            }
+        },
+        "Coconut": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "single superphosphate",
+                "potassium": "muriate of potash"
+            }
+        },
+        "Papaya": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "single superphosphate",
+                "potassium": "muriate of potash"
+            }
+        },
+        "Orange": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "single superphosphate",
+                "potassium": "muriate of potash"
+            }
+        },
+        "Apple": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "diammonium phosphate",
+                "potassium": "potassium chloride"
+            }
+        },
+        "Muskmelon": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium nitrate",
+                "phosphorus": "single superphosphate",
+                "potassium": "muriate of potash"
+            }
+        },
+        "Watermelon": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "diammonium phosphate",
+                "potassium": "potassium chloride"
+            }
+        },
+        "Grapes": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "single superphosphate",
+                "potassium": "muriate of potash"
+            }
+        },
+        "Mango": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "diammonium phosphate",
+                "potassium": "potassium chloride"
+            }
+        },
+        "Banana": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium nitrate",
+                "phosphorus": "single superphosphate",
+                "potassium": "muriate of potash"
+            }
+        },
+        "Pomegranate": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "diammonium phosphate",
+                "potassium": "potassium chloride"
+            }
+        },
+        "Lentil": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium nitrate",
+                "phosphorus": "single superphosphate",
+                "potassium": "muriate of potash"
+            }
+        },
+        "Blackgram": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "diammonium phosphate",
+                "potassium": "potassium chloride"
+            }
+        },
+        "Mungbean": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "single superphosphate",
+                "potassium": "muriate of potash"
+            }
+        },
+        "Mothbeans": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium nitrate",
+                "phosphorus": "diammonium phosphate",
+                "potassium": "potassium chloride"
+            }
+        },
+        "Pigeonpeas": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "single superphosphate",
+                "potassium": "muriate of potash"
+            }
+        },
+        "Kidneybeans": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "diammonium phosphate",
+                "potassium": "potassium chloride"
+            }
+        },
+        "Chickpea": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium nitrate",
+                "phosphorus": "single superphosphate",
+                "potassium": "muriate of potash"
+            }
+        },
+        "Coffee": {
+            "fertilizers": {
+                "nitrogen": "urea, ammonium sulfate",
+                "phosphorus": "diammonium phosphate",
+                "potassium": "potassium chloride"
+            }
+        }
+    }
+}
