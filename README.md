@@ -6,13 +6,13 @@ Key Features for Prediction:
 
 Predictive Analytics: Our model leverages data on:-
 
-'''nitrogen
-phosphorus
-potassium
-temperature
-humidity
-pH(<=14)
-rainfall'''
+'''nitrogen,
+phosphorus,
+potassium,
+temperature,
+humidity,
+pH(<=14),
+rainfall.'''
 
 to forecast the crop yields.
 
@@ -23,8 +23,8 @@ Ready to get started? Head over to the click on->Main Page and experience the fu
 If you have any questions, suggestions, or feedback, don't hesitate to click on-> About us. We value your input and strive to continually improve our service.
 
 execution part:---
-install the requried modules
-its a python flask application
-run this program by using the **python main.py**
+install the requried modules,
+its a python flask application,
+run this program by using the **python main.py..**
 
 
